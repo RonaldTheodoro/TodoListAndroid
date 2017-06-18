@@ -15,7 +15,8 @@
         <TextView
             android:text="@string/login_user"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
+            android:layout_height="wrap_content"
+            android:textStyle="bold" />
 
         <EditText
             android:id="@+id/login_edit_user"
@@ -26,7 +27,8 @@
         <TextView
             android:text="@string/login_password"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
+            android:layout_height="wrap_content"
+            android:textStyle="bold" />
 
         <EditText
             android:id="@+id/login_edit_password"
@@ -46,7 +48,10 @@
             android:id="@+id/login_button_enter"
             android:text="@string/login_button"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
+            android:layout_height="wrap_content"
+            android:background="#000000"
+            android:textColor="#FFFFFF"
+            android:textStyle="bold" />
     </LinearLayout>
 
 </ScrollView>
