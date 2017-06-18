@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.app.todolist.LoginActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="10dp">
+
+        <TextView
+            style="@style/nameField"
+            android:text="@string/login_user" />
+
+        <EditText
+            style="@style/inputField"
+            android:id="@+id/login_edit_user"
+            android:inputType="text"/>
+
+        <TextView
+            style="@style/nameField"
+            android:text="@string/login_password" />
+
+        <EditText
+            style="@style/inputField"
+            android:id="@+id/login_edit_password"
+            android:inputType="textPassword" />
+
+        <CheckBox
+            android:id="@+id/login_checkbox_connect"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/login_checkbox"
+            android:layout_marginBottom="10dp" />
+
+        <Button
+            style="@style/buttonStyle"
+            android:id="@+id/login_button_enter"
+            android:text="@string/login_button"
+            android:onClick="login"/>
+    </LinearLayout>
+
+</ScrollView>

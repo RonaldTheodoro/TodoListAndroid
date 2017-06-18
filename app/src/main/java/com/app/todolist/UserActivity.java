@@ -1,5 +1,6 @@
 package com.app.todolist;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.Menu;
@@ -38,11 +39,43 @@ public class UserActivity extends AppCompatActivity {
         String password = editPassword.getText().toString();
 
         validation = Message.validateFields(
-            name, editUser, getString(R.string.error_name_message));
+            name, editUser, getString(R.string.requested_field));
         validation = Message.validateFields(
-            login, editLogin, getString(R.string.error_login_message));
+            login, editLogin, getString(R.string.requested_field));
         validation = Message.validateFields(
-            password, editPassword, getString(R.string.error_password_message));
+            password, editPassword, getString(R.string.requested_field));
+
+        if (validation)
+            createUser(name, login, password);
+    }
+
+    private void createUser(String name, String login, String password) {
+        user = new User();
+        user.setName(name);
+        user.setLogin(login);
+        user.setPassword(password);
+
+        if (idUser > 0)
+            user.setId(idUser);
+
+        saveUser();
+    }
+
+    private void saveUser() {
+        if (userDao.saveUser(user) != -1) {
+            showMessageAndOpenMainActivity();
+        } else
+            Message.showToastMessage(this, getString(R.string.user_error));
+    }
+
+    private void showMessageAndOpenMainActivity() {
+        if (idUser > 0)
+            Message.showToastMessage(this, getString(R.string.user_updated));
+        else
+            Message.showToastMessage(this, getString(R.string.user_saved));
+
+        finish();
+        startActivity(new Intent(this, MainActivity.class));
     }
 
     @Override
@@ -53,13 +86,29 @@ public class UserActivity extends AppCompatActivity {
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
-        getMenuInflater().inflate(R.menu.login, menu);
+        getMenuInflater().inflate(R.menu.register, menu);
+
+        if (idUser > 0)
+            menu.findItem(R.id.action_delete).setVisible(true);
+
         return true;
     }
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         int id = item.getItemId();
+
+        switch (id) {
+            case R.id.action_save:
+                this.register();
+                break;
+
+            case R.id.action_exit:
+                finish();
+                startActivity(new Intent(this, MainActivity.class));
+                break;
+        }
+
         return (id == R.id.action_settings) || super.onOptionsItemSelected(item);
     }
 }

@@ -8,15 +8,22 @@
     <string name="login_password">Senha</string>
     <string name="login_button">Entrar</string>
     <string name="login_checkbox">Manter Conectado</string>
+    <string name="save_option">Salvar</string>
+    <string name="delete_option">Excluir</string>
+    <string name="exit_option">Sair</string>
 
     <!-- Error message -->
     <string name="error_name_message">Usuario obrigatorio</string>
     <string name="error_password_message">Senha obrigatoria</string>
     <string name="error_login_message">Usuario invalido</string>
+    <string name="requested_field">Campo obrigatorio</string>
 
     <!-- User Activity -->
     <string name="user_text_name">Nome: </string>
     <string name="user_text_login">Login: </string>
     <string name="user_text_password">Senha: </string>
     <string name="user_button_save">Salvar Usuario</string>
+    <string name="user_saved">Usuario cadastrado</string>
+    <string name="user_updated">Usuario atualizado</string>
+    <string name="user_error">Erro ao salvar</string>
 </resources>
