@@ -9,4 +9,7 @@
     <string name="login_button">Entrar</string>
     <string name="login_checkbox">Manter Conectado</string>
 
+    <!-- Error message -->
+    <string name="error_name_message">Usuario obrigatorio</string>
+    <string name="error_password_message">Senha obrigatoria</string>
 </resources>
