@@ -35,9 +35,23 @@ public class DatabaseHelper extends SQLiteOpenHelper{
 
     public static class User {
         public static final String TABLE = "user";
+        public static final String ID = "_id";
+        public static final String NAME = "name";
+        public static final String LOGIN = "login";
+        public static final String PASSWORD = "password";
+        public static final String[] COLUMNS = new String[] {
+            ID, NAME, LOGIN, PASSWORD
+        };
     }
 
     public static class Task {
         public static final String TABLE = "task";
+        public static final String ID = "_id";
+        public static final String NAME = "name";
+        public static final String CREATION_DATE = "creation_date";
+        public static final String FINISHED_DATE = "finished_date";
+        public static final String[] COLUMNS = new String[] {
+            ID, NAME, CREATION_DATE, FINISHED_DATE
+        };
     }
 }
