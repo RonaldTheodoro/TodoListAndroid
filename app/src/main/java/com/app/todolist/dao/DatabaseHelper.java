@@ -14,7 +14,7 @@ public class DatabaseHelper extends SQLiteOpenHelper{
 
     @Override
     public void onCreate(SQLiteDatabase db) {
-        db.execSQL("CREATE TABLE user(" +
+        db.execSQL("CREATE TABLE register(" +
             User.ID + " INTEGER PRIMARY KEY AUTOINCREMENT, " +
             User.NAME + " TEXT NOT NULL, " +
             User.LOGIN + " TEXT NOT NULL, " +
@@ -39,7 +39,7 @@ public class DatabaseHelper extends SQLiteOpenHelper{
     }
 
     public static class User {
-        public static final String TABLE = "user";
+        public static final String TABLE = "register";
         public static final String ID = "_id";
         public static final String NAME = "name";
         public static final String LOGIN = "login";

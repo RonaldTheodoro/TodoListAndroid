@@ -30,6 +30,12 @@ public class UserActivity extends AppCompatActivity {
     }
 
     @Override
+    protected void onDestroy() {
+        userDao.closeConnection();
+        super.onDestroy();
+    }
+
+    @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         getMenuInflater().inflate(R.menu.login, menu);
         return true;
