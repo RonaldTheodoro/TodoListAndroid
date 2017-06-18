@@ -58,7 +58,8 @@ public class LoginActivity extends AppCompatActivity {
             startActivity(new Intent(this, MainActivity.class));
             finish();
         } else
-            Message.showToastMessage(this, "Usuario invalido");
+            Message.showToastMessage(
+                this, getString(R.string.error_login_message));
     }
 
     @Override

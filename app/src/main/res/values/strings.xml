@@ -12,4 +12,5 @@
     <!-- Error message -->
     <string name="error_name_message">Usuario obrigatorio</string>
     <string name="error_password_message">Senha obrigatoria</string>
+    <string name="error_login_message">Usuario invalido</string>
 </resources>
