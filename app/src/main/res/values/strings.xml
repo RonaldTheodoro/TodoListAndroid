@@ -11,6 +11,7 @@
     <string name="save_option">Salvar</string>
     <string name="delete_option">Excluir</string>
     <string name="exit_option">Sair</string>
+    <string name="users">Usuarios</string>
 
     <!-- Error message -->
     <string name="error_name_message">Usuario obrigatorio</string>
