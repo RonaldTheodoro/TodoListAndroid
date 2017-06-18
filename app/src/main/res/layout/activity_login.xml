@@ -17,21 +17,18 @@
             android:text="@string/login_user" />
 
         <EditText
+            style="@style/inputField"
             android:id="@+id/login_edit_user"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="10dp"/>
+            android:inputType="text"/>
 
         <TextView
             style="@style/nameField"
             android:text="@string/login_password" />
 
         <EditText
+            style="@style/inputField"
             android:id="@+id/login_edit_password"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:inputType="textPassword"
-            android:layout_marginBottom="10dp" />
+            android:inputType="textPassword" />
 
         <CheckBox
             android:id="@+id/login_checkbox_connect"

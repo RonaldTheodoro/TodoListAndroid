@@ -17,9 +17,8 @@
             android:text="@string/user_text_name" />
 
         <EditText
+            style="@style/inputField"
             android:id="@+id/user_name"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
             android:inputType="text"/>
         
         <TextView
@@ -27,9 +26,8 @@
             android:text="@string/user_text_login" />
 
         <EditText
+            style="@style/inputField"
             android:id="@+id/user_login"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
             android:inputType="text"/>
 
         <TextView
@@ -37,9 +35,8 @@
             android:text="@string/user_text_password" />
 
         <EditText
+            style="@style/inputField"
             android:id="@+id/user_password"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
             android:inputType="textPassword"/>
 
     </LinearLayout>
