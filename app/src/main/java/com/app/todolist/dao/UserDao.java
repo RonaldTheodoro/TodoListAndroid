@@ -95,6 +95,17 @@ public class UserDao {
         return null;
     }
 
+    public boolean validateLogin(String user, String password) {
+        Cursor cursor = getDatabase().query(
+            DatabaseHelper.User.TABLE,
+            null,
+            "login = ? AND password = ?",
+            new String[] {user, password},
+            null, null, null
+        );
+        return (cursor.moveToFirst());
+    }
+
     public void closeConnection() {
         databaseHelper.close();
         database = null;
