@@ -7,5 +7,6 @@
     <string name="login_user">Usuario</string>
     <string name="login_password">Senha</string>
     <string name="login_button">Entrar</string>
+    <string name="login_checkbox">Manter Conectado</string>
 
 </resources>
