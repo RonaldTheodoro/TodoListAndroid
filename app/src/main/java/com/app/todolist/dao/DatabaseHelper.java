@@ -21,10 +21,10 @@ public class DatabaseHelper extends SQLiteOpenHelper{
             User.PASSWORD + " TEXT NOT NULL)"
         );
         db.execSQL("CREATE TABLE task(" +
-            "_id INTEGER PRIMARY KEY AUTOINCREMENT, " +
-            "name TEXT NOT NULL, " +
-            "creation_date DATE DEFAULT CURRENT_DATETIME, " +
-            "finished_date DATE)"
+            Task.ID + " INTEGER PRIMARY KEY AUTOINCREMENT, " +
+            Task.NAME + " TEXT NOT NULL, " +
+            Task.CREATION_DATE + " DATE DEFAULT CURRENT_DATETIME, " +
+            Task.FINISHED_DATE + " DATE)"
         );
     }
 
