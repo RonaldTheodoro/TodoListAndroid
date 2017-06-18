@@ -27,10 +27,13 @@ public class UserDao {
     private User createUser(Cursor cursor) {
         User user = new User(
             cursor.getInt(cursor.getColumnIndex(DatabaseHelper.User.ID)),
-            cursor.getString(cursor.getColumnIndex(DatabaseHelper.User.NAME)),
-            cursor.getString(cursor.getColumnIndex(DatabaseHelper.User.LOGIN)),
-            cursor.getString(cursor.getColumnIndex(DatabaseHelper.User.PASSWORD))
-        )
+            cursor.getString(
+                cursor.getColumnIndex(DatabaseHelper.User.NAME)),
+            cursor.getString(
+                cursor.getColumnIndex(DatabaseHelper.User.LOGIN)),
+            cursor.getString(
+                cursor.getColumnIndex(DatabaseHelper.User.PASSWORD))
+        );
         return user;
     }
 
@@ -87,7 +90,7 @@ public class UserDao {
         if (cursor.moveToNext()) {
             User user = createUser(cursor);
             cursor.close();
-            return user
+            return user;
         }
         return null;
     }
