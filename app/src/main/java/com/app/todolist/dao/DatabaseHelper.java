@@ -32,4 +32,12 @@ public class DatabaseHelper extends SQLiteOpenHelper{
     public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
 
     }
+
+    public static class User {
+        public static final String TABLE = "user";
+    }
+
+    public static class Task {
+        public static final String TABLE = "task";
+    }
 }
