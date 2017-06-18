@@ -25,6 +25,10 @@ public class MainActivity extends AppCompatActivity {
         int id = item.getItemId();
         if (id == R.id.action_save_user)
             startActivity(new Intent(this, UserActivity.class));
+
+
+        if (id == R.id.action_list_user)
+            startActivity(new Intent(this, ListUsersActivity.class));
         return super.onOptionsItemSelected(item);
     }
 }
