@@ -62,9 +62,10 @@ public class UserActivity extends AppCompatActivity {
     }
 
     private void saveUser() {
-        if (userDao.saveUser(user) != -1) {
+        long id = userDao.saveUser(user);
+        if (id != -1)
             showMessageAndOpenMainActivity();
-        } else
+        else
             Message.showToastMessage(this, getString(R.string.user_error));
     }
 
@@ -109,6 +110,6 @@ public class UserActivity extends AppCompatActivity {
                 break;
         }
 
-        return (id == R.id.action_settings) || super.onOptionsItemSelected(item);
+        return super.onOptionsItemSelected(item);
     }
 }
