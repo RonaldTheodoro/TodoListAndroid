@@ -10,6 +10,7 @@ import android.widget.EditText;
 import android.widget.Toast;
 
 import com.app.todolist.dao.UserDao;
+import com.app.todolist.util.Message;
 
 public class LoginActivity extends AppCompatActivity {
     private EditText editUser;
@@ -57,15 +58,7 @@ public class LoginActivity extends AppCompatActivity {
             startActivity(new Intent(this, MainActivity.class));
             finish();
         } else
-            showToastMessage("Usuario invalido");
-    }
-
-    private void showToastMessage(String message) {
-        Toast.makeText(
-            getApplicationContext(),
-            message,
-            Toast.LENGTH_SHORT
-        ).show();
+            Message.showToastMessage(this, "Usuario invalido");
     }
 
     @Override
