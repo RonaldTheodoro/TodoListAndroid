@@ -26,6 +26,11 @@ public class DatabaseHelper extends SQLiteOpenHelper{
             Task.CREATION_DATE + " DATE DEFAULT CURRENT_DATETIME, " +
             Task.FINISHED_DATE + " DATE)"
         );
+        db.execSQL("INSERT INTO " + User.TABLE + "(" +
+            User.NAME + ", " +
+            User.LOGIN + ", " +
+            User.PASSWORD + ") VALUES ('admin', 'admin', 'admin')"
+        );
     }
 
     @Override
