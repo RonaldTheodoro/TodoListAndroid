@@ -24,7 +24,7 @@ public class DatabaseHelper extends SQLiteOpenHelper{
             Task.ID + " INTEGER PRIMARY KEY AUTOINCREMENT, " +
             Task.NAME + " TEXT NOT NULL, " +
             Task.CREATION_DATE + " DATE DEFAULT CURRENT_TIMESTAMP, " +
-            Task.FINISHED_DATE + " DATE)"
+            Task.FINISHED_DATE + " DATETIME)"
         );
         db.execSQL("INSERT INTO " + User.TABLE + "(" +
             User.NAME + ", " +
