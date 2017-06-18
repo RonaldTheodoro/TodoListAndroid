@@ -8,6 +8,7 @@ import android.widget.EditText;
 
 import com.app.todolist.dao.UserDao;
 import com.app.todolist.model.User;
+import com.app.todolist.util.Message;
 
 public class UserActivity extends AppCompatActivity {
     private EditText editUser;
@@ -27,6 +28,21 @@ public class UserActivity extends AppCompatActivity {
         editUser = (EditText) findViewById(R.id.user_name);
         editLogin = (EditText) findViewById(R.id.user_login);
         editPassword = (EditText) findViewById(R.id.user_password);
+    }
+
+    private void register() {
+        boolean validation = true;
+
+        String name = editUser.getText().toString();
+        String login = editLogin.getText().toString();
+        String password = editPassword.getText().toString();
+
+        validation = Message.validateFields(
+            name, editUser, getString(R.string.error_name_message));
+        validation = Message.validateFields(
+            login, editLogin, getString(R.string.error_login_message));
+        validation = Message.validateFields(
+            password, editPassword, getString(R.string.error_password_message));
     }
 
     @Override

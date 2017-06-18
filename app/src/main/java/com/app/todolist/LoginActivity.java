@@ -44,10 +44,10 @@ public class LoginActivity extends AppCompatActivity {
         String password = editPassword.getText().toString();
         boolean validation;
 
-        validation = validateFields(
+        validation = Message.validateFields(
             user, editUser, getString(R.string.error_name_message));
 
-        validation = validateFields(
+        validation = Message.validateFields(
             password,
             editPassword,
             getString(R.string.error_password_message)
@@ -55,15 +55,6 @@ public class LoginActivity extends AppCompatActivity {
 
         if (validation)
             validateLogin(user, password);
-    }
-
-    private boolean validateFields(
-            String value, EditText editField, String message) {
-        if (value == null || value.equals("")) {
-            editField.setError(message);
-            return false;
-        }
-        return true;
     }
 
     private void validateLogin(String user, String password) {
