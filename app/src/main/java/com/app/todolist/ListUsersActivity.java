@@ -1,5 +1,6 @@
 package com.app.todolist;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.Menu;
@@ -40,8 +41,8 @@ public class ListUsersActivity extends AppCompatActivity {
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         int id = item.getItemId();
-        if (id == R.id.action_settings)
-            return true;
+        if (id == R.id.action_register_user)
+            startActivity(new Intent(this, UserActivity.class));
         return super.onOptionsItemSelected(item);
     }
 }
