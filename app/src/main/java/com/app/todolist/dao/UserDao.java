@@ -32,7 +32,9 @@ public class UserDao {
             cursor.getString(
                 cursor.getColumnIndex(DatabaseHelper.User.LOGIN)),
             cursor.getString(
-                cursor.getColumnIndex(DatabaseHelper.User.PASSWORD))
+                cursor.getColumnIndex(DatabaseHelper.User.PASSWORD)),
+            cursor.getString(
+                cursor.getColumnIndex(DatabaseHelper.User.CREATED_AT))
         );
         return user;
     }
@@ -59,6 +61,7 @@ public class UserDao {
         values.put(DatabaseHelper.User.NAME, user.getName());
         values.put(DatabaseHelper.User.LOGIN, user.getLogin());
         values.put(DatabaseHelper.User.PASSWORD, user.getPassword());
+        values.put(DatabaseHelper.User.CREATED_AT, user.getCreatedAt());
 
         if (user.getId() != null)
             return getDatabase().update(
