@@ -3,16 +3,16 @@ package com.app.todolist.model;
 public class Task {
     private Integer id;
     private String name;
-    private String creation_date;
-    private String finished_date;
+    private String creationDate;
+    private String finishedDate;
 
     public Task() { }
 
-    public Task(Integer id, String name, String creation_date, String finished_date) {
+    public Task(Integer id, String name, String creationDate, String finishedDate) {
         this.id = id;
         this.name = name;
-        this.creation_date = creation_date;
-        this.finished_date = finished_date;
+        this.creationDate = creationDate;
+        this.finishedDate = finishedDate;
     }
 
     public Integer getId() {
@@ -31,19 +31,19 @@ public class Task {
         this.name = name;
     }
 
-    public String getCreation_date() {
-        return creation_date;
+    public String getCreationDate() {
+        return creationDate;
     }
 
-    public void setCreation_date(String creation_date) {
-        this.creation_date = creation_date;
+    public void setCreationDate(String creationDate) {
+        this.creationDate = creationDate;
     }
 
-    public String getFinished_date() {
-        return finished_date;
+    public String getFinishedDate() {
+        return finishedDate;
     }
 
-    public void setFinished_date(String finished_date) {
-        this.finished_date = finished_date;
+    public void setFinishedDate(String finishedDate) {
+        this.finishedDate = finishedDate;
     }
 }
