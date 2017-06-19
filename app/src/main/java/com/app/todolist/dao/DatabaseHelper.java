@@ -18,13 +18,14 @@ public class DatabaseHelper extends SQLiteOpenHelper{
             User.ID + " INTEGER PRIMARY KEY AUTOINCREMENT, " +
             User.NAME + " TEXT NOT NULL, " +
             User.LOGIN + " TEXT NOT NULL, " +
-            User.PASSWORD + " TEXT NOT NULL)"
+            User.PASSWORD + " TEXT NOT NULL, " +
+            User.CREATED_AT + " TEXT)"
         );
         db.execSQL("CREATE TABLE task(" +
             Task.ID + " INTEGER PRIMARY KEY AUTOINCREMENT, " +
             Task.NAME + " TEXT NOT NULL, " +
-            Task.CREATION_DATE + " DATE DEFAULT CURRENT_TIMESTAMP, " +
-            Task.FINISHED_DATE + " DATETIME)"
+            Task.CREATION_DATE + " TEXT, " +
+            Task.FINISHED_DATE + " TEXT)"
         );
         db.execSQL("INSERT INTO " + User.TABLE + "(" +
             User.NAME + ", " +
@@ -44,8 +45,9 @@ public class DatabaseHelper extends SQLiteOpenHelper{
         public static final String NAME = "name";
         public static final String LOGIN = "login";
         public static final String PASSWORD = "password";
+        public static final String CREATED_AT = "created_at";
         public static final String[] COLUMNS = new String[] {
-            ID, NAME, LOGIN, PASSWORD
+            ID, NAME, LOGIN, PASSWORD, CREATED_AT
         };
     }
 
