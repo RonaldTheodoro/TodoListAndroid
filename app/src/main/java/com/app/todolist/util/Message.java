@@ -37,6 +37,14 @@ public class Message {
         alert.show();
     }
 
+    public static AlertDialog createAlertDialog(Activity activity) {
+        final CharSequence[] items = {"Edit", "Delete"};
+        AlertDialog.Builder alert = new AlertDialog.Builder(activity);
+        alert.setTitle("Option");
+        alert.setItems(items, (DialogInterface.OnClickListener) activity);
+        return alert.create();
+    }
+
     public static boolean validateFields(
             String value, EditText editField, String message) {
         if (value == null || value.equals("")) {
