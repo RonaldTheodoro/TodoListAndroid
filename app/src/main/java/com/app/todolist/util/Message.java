@@ -45,6 +45,16 @@ public class Message {
         return alert.create();
     }
 
+    public static AlertDialog createDialogConfirm(Activity activity) {
+        AlertDialog.Builder alert = new AlertDialog.Builder(activity);
+        alert.setMessage("Do you really want to delete?");
+        alert.setPositiveButton(
+            "Sim", (DialogInterface.OnClickListener) activity);
+        alert.setNegativeButton(
+            "Não", (DialogInterface.OnClickListener) activity);
+        return alert.create();
+    }
+
     public static boolean validateFields(
             String value, EditText editField, String message) {
         if (value == null || value.equals("")) {
