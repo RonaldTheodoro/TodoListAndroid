@@ -2,6 +2,7 @@ package com.app.todolist.util;
 
 import android.app.Activity;
 import android.app.AlertDialog;
+import android.content.DialogInterface;
 import android.widget.EditText;
 import android.widget.Toast;
 
@@ -17,6 +18,21 @@ public class Message {
         alert.setTitle(title);
         alert.setMessage(message);
         alert.setNeutralButton("OK", null);
+        alert.setIcon(icon);
+        alert.show();
+    }
+
+    public static void confirmMessage(
+            Activity activity,
+            String title,
+            String message,
+            int icon,
+            DialogInterface.OnClickListener listener) {
+        AlertDialog.Builder alert = new AlertDialog.Builder(activity);
+        alert.setTitle(title);
+        alert.setMessage(message);
+        alert.setPositiveButton("Sim", listener);
+        alert.setNegativeButton("Não", null);
         alert.setIcon(icon);
         alert.show();
     }
