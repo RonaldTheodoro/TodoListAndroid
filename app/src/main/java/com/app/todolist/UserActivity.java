@@ -29,6 +29,16 @@ public class UserActivity extends AppCompatActivity {
         editUser = (EditText) findViewById(R.id.user_name);
         editLogin = (EditText) findViewById(R.id.user_login);
         editPassword = (EditText) findViewById(R.id.user_password);
+
+        idUser = getIntent().getIntExtra("USER_ID", 0);
+
+        if (idUser > 0) {
+            User model = userDao.searchUserById(idUser);
+            editUser.setText(model.getName());
+            editLogin.setText(model.getLogin());
+            editPassword.setText(model.getPassword());
+            setTitle(getString(R.string.user_update));
+        }
     }
 
     private void register() {
